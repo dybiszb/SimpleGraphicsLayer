@@ -7,12 +7,6 @@ project(SKYBOX_EXAMPLE)
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
 #===============================================================================
-# Packages
-#===============================================================================
-#find_package(OpenGL REQUIRED)
-#include_directories(${OPENGL_INCLUDE_DIRS})
-
-#===============================================================================
 # Sources
 #===============================================================================
 set(SOURCE_FILES main.cpp)
@@ -28,5 +22,4 @@ add_executable(SGLSkyboxExample ${SOURCE_FILES})
 # Linking
 #===============================================================================
 target_link_libraries(SGLSkyboxExample SGL)
-#target_link_libraries(SGLSkyboxExample ${OPENGL_LIBRARIES})
 target_link_libraries(SGLSkyboxExample glfw ${GLFW_LIBRARIES})

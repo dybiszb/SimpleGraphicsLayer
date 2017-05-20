@@ -15,7 +15,8 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 # Sources
 #===============================================================================
 set(SOURCE_FILES
-        core.cpp)
+        core.cpp
+        shaders.cpp)
 
 #===============================================================================
 # Compilation

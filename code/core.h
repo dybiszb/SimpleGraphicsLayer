@@ -2,10 +2,8 @@
 #define SGL_CORE_H
 
 #define GLEW_STATIC
-
 #include "GL/glew.h"
 #include <glm/glm.hpp>
-
 #include <stdexcept>
 
 namespace sgl {
