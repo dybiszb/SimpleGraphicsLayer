@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.6)
 # Settings
 #===============================================================================
 add_definitions(-DGLEW_STATIC)
+set(CMAKE_CXX_STANDARD 14)
 
 #===============================================================================
 # Packages
@@ -16,7 +17,8 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 #===============================================================================
 set(SOURCE_FILES
         core.cpp
-        shaders.cpp)
+        shaders.cpp
+        primitives.cpp)
 
 #===============================================================================
 # Compilation

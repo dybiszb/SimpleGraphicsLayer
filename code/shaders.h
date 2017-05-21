@@ -12,6 +12,17 @@
 namespace sgl {
 
     /**
+     * Creates shader program of one of the predefined shader types.
+     *
+     * @param type One of predefined class of shaders. Please refer to enum
+     *             class ShaderType in shaders_types.h.
+     *
+     * @return ID of initialized shader program.
+     */
+    GLuint
+    createPredefinedShaderProgram(ShaderType type);
+
+    /**
      * Creates shader program from vertex and fragment shader loaded from
      * specified paths. In case of any errors, std::runtime_error with
      * appropriate information is generated.
@@ -51,6 +62,18 @@ namespace sgl {
      */
     std::string
     loadShaderSourceCode(const std::string &path, const std::string &type = "");
+
+    /**
+     * Activates specified shader program.
+     *
+     * @param program ID of program to use.
+     */
+    void useProgram(GLuint program);
+
+    /**
+     * Deactivates any currently used shader program.
+     */
+    void unuseProgram();
 
     /**
      * Removes program from OpenGL. In case of any error std:runtime_error will

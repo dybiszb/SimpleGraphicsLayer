@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-project(SKYBOX_EXAMPLE)
+project(TRIANGLE_EXAMPLE)
 
 #===============================================================================
 # Settings
@@ -17,10 +17,10 @@ include_directories(${CMAKE_SOURCE_DIR}/dependencies/glfw-3.1.2/include)
 #===============================================================================
 # Compilation
 #===============================================================================
-add_executable(SGLSkyboxExample ${SOURCE_FILES})
+add_executable(SGLTriangleExample ${SOURCE_FILES})
 
 #===============================================================================
 # Linking
 #===============================================================================
-target_link_libraries(SGLSkyboxExample SGL)
-target_link_libraries(SGLSkyboxExample glfw ${GLFW_LIBRARIES})
+target_link_libraries(SGLTriangleExample SGL)
+target_link_libraries(SGLTriangleExample glfw ${GLFW_LIBRARIES})

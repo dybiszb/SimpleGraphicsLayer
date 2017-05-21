@@ -1,5 +1,16 @@
 #include "shaders.h"
 
+GLuint sgl::createPredefinedShaderProgram(ShaderType type) {
+    switch (type){
+        case ShaderType::Triangle:
+            return createShaderProgramFromSrc(triangleVertexSource,
+                                              triangleFragmentSource);
+        default:
+            throw std::logic_error("Uknown shader type.");
+    }
+
+}
+
 GLuint sgl::createShaderProgramFromFiles(const std::string& vertexPath,
                                          const std::string& fragmentPath)
 {
@@ -83,6 +94,16 @@ std::string sgl::loadShaderSourceCode(const std::string& path,
     }
 
     return shaderCode;
+}
+
+void sgl::useProgram(GLuint program) {
+    glUseProgram(program);
+    checkForErrors(__FUNCTION__);
+}
+
+void sgl::unuseProgram() {
+    glUseProgram(0);
+    checkForErrors(__FUNCTION__);
 }
 
 void sgl::deleteProgram(GLuint programId) {
